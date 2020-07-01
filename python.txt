@@ -34,4 +34,17 @@
 	except:
 	finally:
 	执行try中子句 无异常则跳过except 出现异常则执行except中语句 finally 无论任何情况下都会执行
+25. 命名空间: 局部命名空间->全局命名空间->内置命名空间
+26. os模块 包含操作系统相关函数 os.getcwd() #获取工作目录 os.chdir() # 修改工作目录
+	shutil模块 针对文件和目录的管理 shutil.copy() shutil.move()
+	glob模块 提供函数用于从目录通配符中搜索匹配的文件列表
+	re模块 正则表达式 用于处理复杂匹配 re.findall() re.sub
+	math模块 数学运算
+	random模块 生成随机数的工具
+	urllib.request 互联网及处理网络通信协议
+	datatime 时间日期
+	zlib 数据打包与压缩
+	timeit 性能度量
+	
+
 	
