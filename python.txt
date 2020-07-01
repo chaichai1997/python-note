@@ -28,4 +28,10 @@
 	r 只读方式 rb 二进制只读  r+ 读写  rb+ 二进制读写
 	w 只写方式 wb 二进制写入  w+ 读写  wb+ 二进制读写 (从头开始编辑，原内容被删除)
 	a 追加写入 ab 二进制追加  a+ 读写  ab+ 二进制读写 (文件尾部追加)
+23. python 错误与异常 SyntaxError语法错误(解析错) TypeError异常(运行期检测到的)
+24. 异常处理
+	try:
+	except:
+	finally:
+	执行try中子句 无异常则跳过except 出现异常则执行except中语句 finally 无论任何情况下都会执行
 	
