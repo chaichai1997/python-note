@@ -1,0 +1,26 @@
+1. python3 源文件以UTF-8编码，所有字符串都是unicode字符串，也可指定不同编码格式。# -*- coding: cp-1252 -*-
+2. 单条语句很长时，可以使用反斜杠实现多行语句
+3. python中单引号与双引号使用完全相同
+4. 使用空行分隔两端不同功能的代码
+5. print输出是默认换行的，如果要实现不换行需要在末尾加上 end=''
+6. set集合，由一个或多个形态各异的大小整体组成，创建一个空的集合必须使用set()
+7. / 除法 %取模，返回除法的余数  //取整，除法向下取整
+8. Python位运算符：& 按位与 | 按位或 ^按位异或 ~按位取反 << 左移  >>右移
+9. 随机函数 choice(seq) 从序列中随机挑选； randrange（start, stop, step) ; random(); uniform(x,y)随机生成一个实数，在[x,y]范围内
+10. 三角函数： acos(x) x的反余弦弧度制; hypot(x,y) 欧几里得范数sqrt(xx+yy); degress(x) 弧度转化为角度; radians(X) 角度转为弧度
+11. 字符串格式化输出  %c 字符及其ASCII码 % s 字符串
+12. """ """ 允许一个字符串跨多行，其中可包括换行符、制表符以及其他特殊字符。
+13. 列表 list = [] list.append() 在列表中遍历时，索引位置和对应值可以使用enumerate()函数同时得到 for i,v in enumerate(list)
+	遍历多个序列可以使用zip() for i in zip(list1, list2)
+14. 元组 tuple = () 
+15. 字典 dict = {} 在字典中遍历时，关键字和值可以使用items同时解读 for k,v in dict.items
+15. 结合 s = set() s.add() s.discard(x) 删除集合指定元素
+16. python中没有do...while循环
+17. python迭代器 iter()  next()返回下一个迭代器对象 
+    python生成器 yield() 简单理解为一个迭代器
+18. python中可变对象与不可变对象
+	传不可变对象：整数，字符串，数组 修改的是复制的对象，不会影响a本身
+	传可变对象:列表，字典， 修改后外部变量也会受影响
+19. 列表可以修改，而字符串和元组不能 列表可以当作栈使用 list.append() 入栈; list.pop() 出栈
+20. dir()可以找到引用的模块内定义所有名称
+21. 目录中只有包含init.py 文件时才会被认作是一个包
