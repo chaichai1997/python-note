@@ -1,0 +1,20 @@
+python连接mysql服务器
+python3.x PyMySQL
+Python2 mysqldb
+1. 连接数据库
+	db = pymysql.connect(
+	"localhost", # 主机名
+	"testuser",  # 用户名
+	"test123",   # 用户密码
+	"TESTDB"     # 数据库名称
+	)
+	
+	cursor = db.cursor()  # 创建一个游标对象
+
+2. 数据库查询
+    fetchone() # 获取下一个查询结果集
+	fetchall() # 接收全部的返回结果行
+	rowcount() # 返回执行execute()方法后影响的行数
+3. 数据库事务
+    原子性/一致性/隔离性/持久性
+	
