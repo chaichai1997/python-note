@@ -1,0 +1,49 @@
+正则表达式：检查一个字符串是否与某种模式匹配。模块：re
+1. re.match(pattern, string, flags=0) #从string起始位置匹配一个pattern，非起始位置，则返回none
+2. re.serach(pattern, string, flags=0) #扫描string并返回第一个成功的匹配
+3. re.sub(pattern, repl, string, count=0, flags=0) #扫描string并将符合pattern的替换为repl，repl参数也可以是一个函数
+4. re.compile(pattern, [,flags]) # 编译正则表达式，生成一个正则表达式对象，供match与search调用
+5. re.findall(string, [,pos[,endpos]]) # 找到匹配的所有字串，并返回一个列表，可指定起始位置
+6. re.finditer(pattern, string, flags=0) # 找到匹配的所有字串，作为一个迭代器返回
+7. re.spilt(pattern, string, [,maxspilt=0, flags=0]) # 按照能够匹配的子串将字符串分割后返回列表
+正则表达式对象
+1. RegexObject
+	re.complie() 返回RegexObject对象
+2. MatchObject
+	group() 返回匹配的字符串
+	start() 返回匹配开始的位置
+	end()   返回匹配结束的位置
+	span()  返回一个元组包含(开始，结束)的位置
+正则表达式修饰符 flags可选标志
+re.I  使匹配对大小不敏感
+re.L  做本地化识别匹配
+re.M  多行匹配
+re.S  使.匹配包括换行在内的所有字符
+re.U  根据Unicode字符集解析字符
+正则表达式模式 Pattern
+1.字母和数字表示其自身
+2.标点符号只有被转义时才匹配自身
+3.反斜杠本身需要使用反斜杠转义
+4.  ^字符串开头  
+	$字符串末尾 
+	. 除换行符外的任意字符  
+	[...]表示一组字符
+	[^...]不在[]中的字符 
+	re* 0个或多个的表达式 
+	re+ 匹配1个或多个的表达式
+	a|b a或b
+	\w  匹配数字字母下划线
+	\W  匹配非数字字母下划线
+	\s  匹配任意空白字符,等价于 [\f\n\r\t\v]
+	\S  匹配任意非空字符
+	\d  匹配任意数字，等价于[0-9]
+	\D  匹配任意非数字, 等价于[^0-9]
+	\A  匹配字符串开始
+	\Z  匹配字符串结束
+	\n  匹配一个换行符
+	\t  匹配一个制表符
+	\1  匹配第i个分组的内容
+	\B  匹配非单词边界
+	\b  匹配一个单词边界
+	
+	
