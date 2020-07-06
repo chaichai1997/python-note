@@ -1,0 +1,25 @@
+mysql-connector是mysql官方提供的驱动器
+安装：python -m pip install mysql-connector
+1. 连接数据库
+	mydb = mysql.connector.connect(
+		host="localhost",       # 数据库主机地址
+		user="yourusername",    # 数据库用户名
+		passwd="yourpassword"   # 数据库密码
+		# database = "database_name" # 数据库名称
+	)
+	直接连接数据库时，若数据表不存在，则会输出错误信息
+2. 新建数据库
+	mycursor = mydb.cursor()
+	mycursor.execute("CREATE DATABASE nowcoder_db")
+3. 新建数据表
+	mycursor.execute("CREATE TABLE sites (name VARCHAR(255), url VARCHAR(255))")
+4. 批量插入
+	sql = "INSERT INTO sites (name, url) VALUES (%s, %s)"
+	val = [
+	('Google', 'https://www.google.com'),
+	('Github', 'https://www.github.com'),
+	('Taobao', 'https://www.taobao.com'),
+	('stackoverflow', 'https://www.stackoverflow.com/')
+	]
+ 
+	mycursor.executemany(sql, val)
