@@ -1,0 +1,26 @@
+Python网络编程
+Python提供了两个级别访问的网络服务 低级别的Socket 高级别的SocketServer
+Socket又称套接字，应用程序通过套接字向网络发出请求或者答应网络请求，使主机间或一台计算机的进程间通信
+1. socket() 函数 创建套接字
+	socket.socket([family[, tyoe[,proro]]])  family: AF_UNIX/AF_INET; type:SOCK_STREAM/SOCK_DGRAM
+2. 内建方法
+   服务器端：
+	s.bind(host, port) # 绑定地址到套接字
+	s.listen() # TCP监听
+	s.accept() # 接收TCP客户端连接
+   客户端：
+    s.connect(host， port) # 初始化TCP服务器连接，出错则返回socket.error
+	s.connect_ex()         # connect扩展版本，出错时返回出错码
+   公共用途
+    s.recv()  #  接收TCP数据，数据以字符串形式返回
+	s.send()  # 发送TCP数据
+	s.sendall()  #  完整发送TCP数据
+	s.recvfrom()  # 接收UDP数据
+	s.sendto() # 发送UDP数据
+	s.close() # 关闭套接字
+	s.getpeername() # 获取连接套接字的远程地址
+	s.getsockname() # 返回套接字自己的地址
+	
+	
+	
+	
