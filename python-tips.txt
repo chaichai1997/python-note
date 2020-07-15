@@ -45,6 +45,12 @@
 	datatime 时间日期
 	zlib 数据打包与压缩
 	timeit 性能度量
+27. python读入多行数据
+	while True:
+		try:
+			year, month = map(int, input().spilt)
+		except:
+			break
 	
 
 	

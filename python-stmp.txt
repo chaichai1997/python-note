@@ -1,0 +1,25 @@
+STMP 简单邮件传输协议，是用于从源地址到目的地址传送邮件的规则，控制新建的中转方式
+
+1. 创建STMP对象
+import stmplib
+
+obj = stmplib.STMP([host, [port, [local_hostname]]])
+
+host:主机；port:端口； local_hostname：服务器地址(本地)
+
+2. sendmail 发送邮件
+
+obj.sendmail(from_addr, to_addrs, msg[, mail_option, rcpt_options])
+from_addr: 发送者地址； to_addrs：收件人地址； msg:消息；
+
+3. 使用第三方STMP服务时需要设置服务器
+mail_host="smtp.XXX.com"  #设置服务器
+mail_user="XXXX"    #用户名
+mail_pass="XXXXXX"   #口令
+
+smtpObj = smtplib.SMTP()
+smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
+smtpObj.login(mail_user,mail_pass)
+
+4. 邮件附件第三方包
+from email.mime.multipart import MIMEMultipart
