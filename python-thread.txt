@@ -1,0 +1,46 @@
+1. 每个独立的线程有一个程序运行的入口，顺序执行序列和程序的出口，但是线程不能独立运行。
+   每个线程都有自己的一组CPU寄存器，成为线程的上下文，反映了线程上次运行的状态。
+   指令指针和堆栈指针时线程上下文的重要寄存器
+2. 模块 _thread(Python2 已废弃) threading(python3)
+3. 线程的使用
+	(1) 两种方式：函数、类
+	(2) 方法：
+	threading.Thread()  创建线程
+	threading.currentThread() 返回当前的线程变量
+	threading.enumerate() 返回一个包含正在运行的线程的list
+	threading.activeCount() 返回正在运行的线程数量
+	run() 表示线程活动
+	start() 启动线程活动的方法
+	join([time]) 等待至线程终止
+	isAlive()  线程是否活动
+	getName()  返回线程名
+	setName()  设置线程名
+4. 创建线程
+	类方法：
+	class myThread (threading.Thread):
+		def __init__(self, threadID, name, counter):
+			threading.Thread.__init__(self)
+			self.threadID = threadID
+			self.name = name
+			self.counter = counter
+			
+		def run(self):
+			print ("开始线程：" + self.name)
+			threadlock.acquire()
+			print_time(self.name, self.counter, 5)
+			threadlock.release()
+			print ("退出线程：" + self.name)
+			
+	threadlock = threading.lock()
+	thread1 = myThread(1, "Thread-1", 1)
+	thread1.start()
+5. 线程同步机制
+   使用Thread对象的Lock与Rlock，两个对象都有acquire和release方法
+   对于每次只允许一个线程操作的数据，将其操作放置到acquire和release之间
+6. 线程优先级队列
+	Queue 先入先出
+	LifoQueue 后入先出
+	PriorityQueue 优先级队列
+	
+   
+	
