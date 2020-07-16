@@ -1,0 +1,28 @@
+XML 可扩展标记语言，是标准通用标记语言的子集，是一种用于标记电子文件使其具有结构性的标记语言
+	1. XML用于传输和存储数据
+	2. XML是一套定义语义标记的规则，这些标记将文档分成许多部件
+	3. XML定义了用于定义其他与特定领域有关的、语义的、结构化的标记语言
+Python解析XML
+1. SAX (sample API for XML)
+	SAX用事件驱动模型，在解析过程中触发一个个事件并调用用户定义的回调函数处理XML文件
+	SAX是一种基于事件驱动的API,解析XML的过程涉及到解析器和事件处理器
+	解析器负责读取XML文档；事件处理器负责对事件做出响应
+	1.1 使用
+	函数 xml.sax.parse()  创建一个SAX解析器并解析XML文档
+		 xml.sax.make_parse 创建一个新的解析器对象并返回
+		 xml.sax.parseString() 创建一个XML解析器并解析XML字符串
+	类 xml.sax.handler .ContentHandler 
+			characters(content)
+			startDocument() 文档启动时调用
+			endDocument()    解析器到达文档结尾时带调用
+			startElement(name, attrs) 开始标签
+			endElement(name) 结束标签
+			
+2. DOM (Document Object Model)
+	将XML文件解析成一个树，通过对树的操作操作XML
+	DOMTree = xml.dom.minidom.parse("movies.xml")
+	collection = DOMTree.documentElement
+3. ElementTree
+	使用ELemenTree表示整个XML文档，ELement类表示XML节点
+	
+	
