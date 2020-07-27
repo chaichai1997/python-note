@@ -38,8 +38,10 @@ NoSQL数据库分类
 6. 增
 	dict = { "name": "NOWCODER", "alexa": "10000", "url": "https://www.nowcoder.com" }
 	x = data.insert_one(dict)
+	x = data.insert_many(dict)
    查
     x = data.find_one() # 查询sites文档中的第一条数据
+	x = data.find()  # 查询集合中所有数据
    改
     dict1 = { "alexa": "10000" }
 	dict2 = { "$set": { "alexa": "12345" } }
