@@ -51,6 +51,9 @@
 			year, month = map(int, input().spilt)
 		except:
 			break
-	
+28. Python 子类继承父类构造函数
+	子类重写了init函数的情况下，实例化子类时就不会调用父类的构造函数
+	子类不重写的情况况下，会自动调用父类定义的init
+
 
 	
