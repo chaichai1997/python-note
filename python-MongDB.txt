@@ -46,9 +46,13 @@ NoSQL数据库分类
     dict1 = { "alexa": "10000" }
 	dict2 = { "$set": { "alexa": "12345" } }
 	data.update_one(dict1, dict2)
+	update_many()
    排序
 	myclient = data.find().sort('col') # 按照col属性排序
    删除
     data.delete_one(dict2) #删除alexa字段值为12345的文档
+7. 排序
+    my_doc = data.find().sort("alexa")
+
 	
 	

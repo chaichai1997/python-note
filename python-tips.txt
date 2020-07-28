@@ -60,5 +60,36 @@
 	         自第一次调用以后到现在的运行时间(第二次) t_1
 			 t_1- t_0  实际运行实际
 30. time.mktime()接收struct_time对象作为参数，返回用秒数来表示时间的浮点数
+31. all() 函数判断可迭代对象的所有元素是否为True,当元素中出现0、False,''时返回False
+    any() 函数判断可迭代对象的所有元素是否包含True，有则返回True
+32. bin() 将对象转换为二进制表示
+    chr() 整数-> ASCII
+	float() 整数/字符串 -> 浮点数
+	hash()  对象-> Hash值
+	hex()  数字-> 16进制
+	id()  对象-> 内存地址
+	int()  对象-> 整型
+33. Python classmethod修饰符
+	修饰符对应的函数不需要实例化，不需要self参数，但函数的第一个参数要是表示类本身的cls参数
+34. compile 创建一个复数 complex(1, 2) -> 1+2j
+35. dir() 返回当前范围的变量、方法和定义的类型列表
+36. divmod(a, b) 返回元组(a//b, a%b)
+37. eval() 执行一个字符串表达式
+	exec() 执行存储在字符串或文件中的python语句
+38. filter() 过滤序列
+39. format() 格式化函数
+	“{}{}”.format("hello", "word")
+40. globals()  返回当前位置的全部全局变量
+41. 类的相关方法
+	hasattr(object, name) # 判断对象是否含有相关属性
+	getattr(object, name) # 返回一个对象属性值
+42. help()  # 查看函数或模块的详细说明
+43. isinstance(object, type) # 判断一个对象是否是一个已知的类型
+    issubclass(class, classinfo) # 判断参数class是否是类型参数classinfo的子类
+44. iter() 生成迭代器
+    a = [1, 2, 3]
+	for i in iter(a):  # 生成迭代器
+		print(i)
+	
 
 	
