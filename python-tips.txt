@@ -70,8 +70,11 @@
 	id()  对象-> 内存地址
 	int()  对象-> 整型
 	list() 对象-> 列表
+	oct()   整数-> 8进制
 33. Python classmethod修饰符
 	修饰符对应的函数不需要实例化，不需要self参数，但函数的第一个参数要是表示类本身的cls参数
+	staticmethod修饰符 @staticmethod 
+	修饰符对应的方法为静态方法，静态方法无需类实例化也可调用
 34. compile 创建一个复数 complex(1, 2) -> 1+2j
 35. dir() 返回当前范围的变量、方法和定义的类型列表
 36. divmod(a, b) 返回元组(a//b, a%b)
@@ -85,6 +88,7 @@
 41. 类的相关方法
 	hasattr(object, name) # 判断对象是否含有相关属性
 	getattr(object, name) # 返回一个对象属性值
+	setattr(object, name, value)  # 设置属性值
 42. help()  # 查看函数或模块的详细说明
 43. isinstance(object, type) # 判断一个对象是否是一个已知的类型
     issubclass(class, classinfo) # 判断参数class是否是类型参数classinfo的子类
@@ -92,6 +96,8 @@
     a = [1, 2, 3]
 	for i in iter(a):  # 生成迭代器
 		print(i)
+	print在2.X版本中是一个关键字，在3.X版本中是一个函数
+45. sort() 只应用在list上的方法，是对已存在的列表上进行操作
+    sorted() 可应用在所有可迭代的对象上，返回一个新对象，不改变原对象
 	
-
 	
