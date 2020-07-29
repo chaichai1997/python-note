@@ -48,7 +48,7 @@
 27. python读入多行数据
 	while True:
 		try:
-			year, month = map(int, input().spilt)
+			year, month = map(int, input().spilt)   # map映射，返回一个迭代器
 		except:
 			break
 28. Python 子类继承父类构造函数
@@ -69,6 +69,7 @@
 	hex()  数字-> 16进制
 	id()  对象-> 内存地址
 	int()  对象-> 整型
+	list() 对象-> 列表
 33. Python classmethod修饰符
 	修饰符对应的函数不需要实例化，不需要self参数，但函数的第一个参数要是表示类本身的cls参数
 34. compile 创建一个复数 complex(1, 2) -> 1+2j
@@ -80,6 +81,7 @@
 39. format() 格式化函数
 	“{}{}”.format("hello", "word")
 40. globals()  返回当前位置的全部全局变量
+	locals()   返回当前位置的全部局部变量
 41. 类的相关方法
 	hasattr(object, name) # 判断对象是否含有相关属性
 	getattr(object, name) # 返回一个对象属性值
