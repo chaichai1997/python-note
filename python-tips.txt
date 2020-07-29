@@ -71,6 +71,7 @@
 	int()  对象-> 整型
 	list() 对象-> 列表
 	oct()   整数-> 8进制
+	tuple() 列表-> 元组
 33. Python classmethod修饰符
 	修饰符对应的函数不需要实例化，不需要self参数，但函数的第一个参数要是表示类本身的cls参数
 	staticmethod修饰符 @staticmethod 
@@ -97,6 +98,7 @@
 	for i in iter(a):  # 生成迭代器
 		print(i)
 	print在2.X版本中是一个关键字，在3.X版本中是一个函数
+	print(, end='') #可通过指定end参数的值，取代末尾的回车符，实现输出不换行
 45. sort() 只应用在list上的方法，是对已存在的列表上进行操作
     sorted() 可应用在所有可迭代的对象上，返回一个新对象，不改变原对象
 	
